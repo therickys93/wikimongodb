@@ -11,8 +11,10 @@ after_success:
 - sh set_tags.sh
 deploy:
   provider: releases
+  file_glob: "true"
+  skip_cleanup: true
   api_key:
     secure: N3YXXavk3DF77ATzVBP1O9Gp+sTJSGUV1N4Xu/ajQ87PdlYBDDtr+FtuBIkD0IrbuJauPXcBdb2CXdnvHxYjlwsbkQ+loCvviFqzuRFxOUJgpBNOWR8wqAFGl+xnDamJnUs8W//TDzsKDcwhuADBPJ/gy7zfoWe7rWHzkNpEHyeS8oweoi0p+810v58EuVmnhE0vDOLK4xGKeMUt9Fad/S29v4ETVjZBCEnAKY/IodbRbks5v76EJn2jllXI0Z5JkE65i8AuL7t5vjoUe21tS935RVx9z4M7YKwW/zz3naQ/w3TtcMdwIcupM/gdraJygHpEHihFICd/rM7DpNUQyayjzLAeIcHCfeWMRbaAaPM2bvVyu9+reFB4Yzyb/pEOUtRYJ4ysN57CetMdyim0MsuDKKXmFTnYIeKTfENouGYpK1sRNXSoK3hlY7LT/g+ZA9WDsTA+Ls25VM5b+dIHItX0Wp4a6L4TIZCm4Izn9cmThTq+Np9PKvUxnK5KGmB+hlnb59P/gyKy06Arzy1/j/e4K3DX8xxOUORd2MmhQkik056/TVFEroKMuftYY/XAZgYki+SHdriML7uDQ9sX9e5XkOpcdnUymlbl8tOYj3GQSFWT1yPJF0NF50qBOOwcjIt2KgFdeTQvm7M10qJDCi+7Son1DKTEpSZ0T/Qxy+8=
-  file: ''
   on:
+    branch: master
     repo: therickys93/wikimongodb
